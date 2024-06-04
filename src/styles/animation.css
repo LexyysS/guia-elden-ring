@@ -1,0 +1,18 @@
+a {
+    text-decoration: none;
+    transition: all 0.6s ease;
+  }
+
+  a:hover {
+    transition: all 0.6s ease;
+  }
+
+  .nav-flyout {
+    transform: translateX(100%);
+    transition: all 0.5s ease;
+  }
+
+  .nav-flyout:hover {
+    transform: translateX(0);
+    transition: all 0.5s ease;
+  }
