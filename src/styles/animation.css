@@ -1,18 +1,21 @@
-a {
-    text-decoration: none;
-    transition: all 0.6s ease;
-  }
 
-  a:hover {
-    transition: all 0.6s ease;
-  }
 
-  .nav-flyout {
-    transform: translateX(100%);
-    transition: all 0.5s ease;
+  .menu-enter {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
   }
-
-  .nav-flyout:hover {
-    transform: translateX(0);
-    transition: all 0.5s ease;
+  
+  .menu-enter-active {
+    max-height: 100%; /* Ajusta este valor según la altura del contenido */
+  }
+  
+  .menu-leave {
+    max-height: 100%; /* Ajusta este valor según la altura del contenido */
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+  }
+  
+  .menu-leave-active {
+    max-height: 0;
   }

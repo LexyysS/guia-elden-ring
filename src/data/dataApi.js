@@ -1,5 +1,6 @@
 export const DataNPC = {
     "success": true,
+    "tipo": "npc",
     "count": 55,
     "total": 55,
     "data": [

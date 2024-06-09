@@ -1,32 +1,37 @@
-
-
-const articleNPC = ({nombre, descripcion, imagen, localizacion , rol}) => {
+const articleNPC = ({ nombre, descripcion, imagen, localizacion, rol }) => {
   return (
     <>
-      <h1 className="text-2xl font-eldenRing uppercase "> {nombre}</h1>
-      <div className="w-full h-1/2 grid grid-cols-1 md:grid-cols-2 mt-12 gap-3">
-        <div className="w-full h-full ">
-          <p className="text-white ">{descripcion}</p>
+      <div className="w-full h-full flex   gap-3 justify-between">
+        <div className="w-[55%] h-full ">
+          <h1 className="text-2xl mt-12 mb-12 font-eldenRing uppercase animate-slide-in-left">
+            {" "}
+            {nombre}
+          </h1>
+          <p className="text-white animate-slide-in-left">{descripcion}</p>
+
+          <div className="w-full mt-5">
+            <h2 className="text-xl mb-5 py-2 border-b text-black border-black ">
+              Localizacion
+            </h2>
+            <p className="text-white">{localizacion}</p>
+          </div>
+
+          <div className="w-full mt-5">
+            <h2 className="text-xl mb-5 py-2 border-b text-black border-black ">
+              Rol{" "}
+            </h2>
+            <p className="text-white">{rol}</p>
+          </div>
         </div>
 
-        <div className="w-full h-full rounded-lg">
-          
-          <img src={imagen} alt={"Imagen card"} className="w-full h-[250px]  object-cover object-top  rounded-lg" />
+        <div className="w-[45%] flex justify-center items-center h-full bg-gray-900  rounded-l-[40px] ">
+          <img
+            src={imagen}
+            alt={"Imagen card"}
+            className="w-full h-[300px] animate-fade-in object-cover object-top " 
+            style={{maskImage: "linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%)"}}
+          />
         </div>
-      </div>
-
-      <div className="w-full mt-5">
-        <h2 className="text-xl mb-5 py-2 border-b text-black border-black ">
-          Localizacion
-        </h2>
-        <p className="text-white">{localizacion}</p>
-      </div>
-
-      <div className="w-full mt-5">
-        <h2 className="text-xl mb-5 py-2 border-b text-black border-black ">
-          Rol{" "}
-        </h2>
-        <p className="text-white">{rol}</p>
       </div>
     </>
   );

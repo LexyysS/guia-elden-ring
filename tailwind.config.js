@@ -1,3 +1,4 @@
+import animations from '@midudev/tailwind-animations'
 
 
 
@@ -31,6 +32,8 @@ export default {
 
     },
   },
-  plugins: [],
+  plugins: [
+    animations
+  ],
 }
 
